@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Samira Stuff</title>
+  <style>
+    body {
+      font-family: cursive;
+      text-align: center;
+      margin-top: 50px;
+      color: red;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #ff0000;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 12px; 
+        border: none;         
+        background-color: #34db5e; 
+    }
+  </style>
+</head>
+<body>
+
+  <h1>samira:</h1>
+  <button id="revealBtn">click to find out!</button>
+  <p id="arrow" style="font-size: 100px; display: none;">⬇️</p>
+  <h2 id="randomText" style="display: none;"></h2>
+
+  <script>
+    const button = document.getElementById('revealBtn');
+    const h2 = document.getElementById('randomText');
+
+    const randomStuff = [
+      "likes the girl in the red dress",
+      "likes chloe",
+      "is secretly in love with rebecca in her dreams",
+      "once sang in the shower about reyna",
+      "is a wonderful happy orangutan red energetic",
+      "moans a lot",
+      "is pansexual",
+      "loves to dance",
+      "taaw"
+    ];
+
+    button.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * randomStuff.length);
+      h2.textContent = randomStuff[randomIndex];
+      h2.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
